@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A weekly schedule built with an HTML table and CSS">
+  <title>My Weekly Schedule</title>
+  <link rel="stylesheet" href="style/weekly-schedule.css">
+</head>
+<body>
+  <main class="schedule-card">
+    <header class="page-header">
+      <p class="eyebrow">A little structure for the week</p>
+      <h1>My Weekly Schedule</h1>
+      <p class="intro">Classes, focus time, and breaks — all in one place.</p>
+    </header>
+
+    <div class="table-scroll" role="region" aria-label="Weekly schedule" tabindex="0">
+      <table>
+        <caption>Monday through Friday · Example week</caption>
+        <thead>
+          <tr>
+            <th scope="col">Time</th>
+            <th scope="col">Monday</th>
+            <th scope="col">Tuesday</th>
+            <th scope="col">Wednesday</th>
+            <th scope="col">Thursday</th>
+            <th scope="col">Friday</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">8:00</th>
+            <td class="class-block">Computer Science</td>
+            <td class="study-block">Study time</td>
+            <td class="class-block">Computer Science</td>
+            <td class="study-block">Study time</td>
+            <td class="class-block">Computer Science</td>
+          </tr>
+          <tr>
+            <th scope="row">9:00</th>
+            <td class="class-block">Computer Science</td>
+            <td class="class-block">Mathematics</td>
+            <td class="class-block">Computer Science</td>
+            <td class="class-block">Mathematics</td>
+            <td class="study-block">Weekly review</td>
+          </tr>
+          <tr>
+            <th scope="row">10:00</th>
+            <td class="class-block">English</td>
+            <td class="class-block">Mathematics</td>
+            <td class="class-block">English</td>
+            <td class="class-block">Mathematics</td>
+            <td class="study-block">Project work</td>
+          </tr>
+          <tr>
+            <th scope="row">11:00</th>
+            <td class="study-block">Homework</td>
+            <td class="class-block">Biology</td>
+            <td class="study-block">Homework</td>
+            <td class="class-block">Biology</td>
+            <td class="study-block">Project work</td>
+          </tr>
+          <tr class="break-row">
+            <th scope="row">12:00</th>
+            <td colspan="5">Lunch break</td>
+          </tr>
+          <tr>
+            <th scope="row">1:00</th>
+            <td class="class-block">Biology</td>
+            <td class="study-block">Reading</td>
+            <td class="class-block">Biology</td>
+            <td class="study-block">Reading</td>
+            <td class="free-block">Free time</td>
+          </tr>
+          <tr>
+            <th scope="row">2:00</th>
+            <td class="study-block">Study time</td>
+            <td class="class-block">English</td>
+            <td class="study-block">Study time</td>
+            <td class="class-block">English</td>
+            <td class="free-block">Free time</td>
+          </tr>
+          <tr>
+            <th scope="row">3:00</th>
+            <td class="free-block">Free time</td>
+            <td class="free-block">Free time</td>
+            <td class="free-block">Free time</td>
+            <td class="free-block">Free time</td>
+            <td class="free-block">Free time</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <footer class="schedule-footer" aria-label="Schedule legend">
+      <span><i class="legend-dot class-dot"></i> Class</span>
+      <span><i class="legend-dot study-dot"></i> Study</span>
+      <span><i class="legend-dot free-dot"></i> Free time</span>
+    </footer>
+  </main>
+</body>
+</html>

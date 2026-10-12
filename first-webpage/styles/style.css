@@ -1,0 +1,64 @@
+/* This is how we comment in CSS */
+
+/*Style for First-level heading */
+h1 {
+    color: green;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h2 {
+    color: blueviolet;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 30px;
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(0, 128, 128);
+    margin: 20px 0;
+
+}
+
+ol {
+    font-style: italic;
+}
+
+section{
+    margin: 20px;
+}
+img{
+    width: 200px;
+    border-radius: 50%;
+    margin: 20px;
+    border-color: black;
+}
+
+main{
+    max-width: 900px;
+    margin: 10px;
+}
+
+
+/*Specify a rule for a class selector */
+.tagline {
+    font-style: italic;
+}
+
+.contact {
+    background-color: aqua;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border-color: black;
+    max-width: 500px;
+}
+
+/* Specify a rule for an id selector */
+#books{
+   background-color: aqua;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
