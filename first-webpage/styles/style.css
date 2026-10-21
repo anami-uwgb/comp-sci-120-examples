@@ -4,6 +4,17 @@
 h1 {
     color: green;
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+}
+
+/* @media (width >=800px) {
+    h1 {
+        font-size: 4rem;
+    }
+} */
+
+h1 {
+    font-size: calc(1 rem + 4vw);
 }
 
 h2 {
@@ -23,18 +34,19 @@ ol {
     font-style: italic;
 }
 
-section{
+section {
     margin: 20px;
 }
-img{
-    width: 200px;
+
+img {
+    max-width: 100%;
     border-radius: 50%;
     margin: 20px;
     border-color: black;
 }
 
-main{
-    max-width: 900px;
+main {
+    max-width: 100%;
     margin: 10px;
 }
 
@@ -54,8 +66,8 @@ main{
 }
 
 /* Specify a rule for an id selector */
-#books{
-   background-color: aqua;
+#books {
+    background-color: aqua;
 }
 
 nav {
