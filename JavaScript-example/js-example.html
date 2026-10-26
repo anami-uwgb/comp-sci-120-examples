@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>JavaScript Example</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+    <button>Player 1: Chris</button>
+
+    <!-- <p>
+        <label>Player Name</label>
+    </p> -->
+    
+</body>
+
+<!-- JavaScript within HTML document  -->
+<script>
+    
+    function updateName() {
+        const name = prompt("Enter a new name");
+        
+        // JavaScript formatter string 
+        button.textContent = `Player 1: ${name}`;
+    }
+
+    
+    const button = document.querySelector("button");
+    button.addEventListener("click", updateName);
+   
+
+</script>
+
+</html>

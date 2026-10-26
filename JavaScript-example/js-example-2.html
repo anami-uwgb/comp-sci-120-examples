@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en-US">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>Apply JavaScript example</title>
+</head>
+
+<body>
+  <button id="button1">Click me</button>
+
+  <button id="button2">Another button to click!</button>
+  <script>
+    // JavaScript goes here
+    function createParagraph() {
+      const para = document.createElement("p");
+      para.textContent = "You clicked the button!";
+      document.body.appendChild(para);
+    }
+
+    function createAlert(){
+      alert("You clicked the second button!");
+    }
+
+    // const buttons = document.querySelectorAll("button");
+    // const button = document.querySelector("button");
+
+    // button.addEventListener("click", createParagraph);
+    const button1 = document.getElementById("button1");
+    button1.addEventListener("click", createParagraph);
+
+    const button2 = document.getElementById("button2");
+    button2.addEventListener("click", createAlert);
+
+  </script>
+</body>
+
+</html>
