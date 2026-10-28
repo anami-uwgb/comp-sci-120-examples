@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width">
     <title>JavaScript Example</title>
     <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+
 </head>
 
 
@@ -17,22 +19,5 @@
     </p> -->
     
 </body>
-
-<!-- JavaScript within HTML document  -->
-<script>
-    
-    function updateName() {
-        const name = prompt("Enter a new name");
-        
-        // JavaScript formatter string 
-        button.textContent = `Player 1: ${name}`;
-    }
-
-    
-    const button = document.querySelector("button");
-    button.addEventListener("click", updateName);
-   
-
-</script>
 
 </html>
