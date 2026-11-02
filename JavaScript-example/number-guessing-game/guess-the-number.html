@@ -116,8 +116,12 @@
         guessField.focus();
       }
 
+      // Register an event listener to the button 
+      guessSubmit.addEventListener("click", checkGuess);
 
-      // Reset the game 
+
+
+      // End the game       
       function setGameOver(){
         // disable the input field
         guessField.disabled = true; 
@@ -131,6 +135,36 @@
         document.body.append(resetButton);
         // add an event listener 
         resetButton.addEventListener("click", resetGame);
+      }
+
+      // Reset the game 
+      function resetGame(){
+        // Reset the guessCount
+        guessCount = 1;
+
+        // Clean up the results 
+        const resetParams = document.querySelectorAll(".resultParas p");
+        for (const resetParam of resetParams){
+          resetParam.textContent = "";
+        }
+
+        // Remove the "Start new game" button
+        resetButton.parentNode.removeChild(resetButton);
+
+        // Enable the text field 
+        guessField.disabled = false;
+        // Enable the button
+        guessSubmit.disabled = false; 
+        // Clear up the text field 
+        guessField.value = "";
+        // Return focus to the text field 
+        guessField.focus();
+
+        // Change the background of lastResult to white 
+        lastResult.style.backgroundColor = "white";
+
+        // Generate a new random number for the next play
+        randomNumber = Math.floor(Math.random() * 100) + 1;
       }
     </script>
   </body>
