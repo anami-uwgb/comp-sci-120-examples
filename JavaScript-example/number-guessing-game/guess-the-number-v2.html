@@ -112,7 +112,6 @@
             guessField.value = "";
             //Return the focus to the text field
             guessField.focus();
-          } /* This is the end of checkGuess function */
 
             //Register an event listener to the button
             guessSubmit.addEventListener("click", checkGuess)
@@ -134,13 +133,13 @@
                 //add an event listener
                 resetButton.addEventListener("click", resetGame);
             }
-        //} /* setGameOver is now inside checkGuess function; this should not be the case */
+        }
 
         //Reset the game
         function resetGame(){
           //Reset the guessCount
           guessCount = 1;
-        //} /* The following steps should be part of the resetGame function */
+        }
 
         //Clean up the results, meaning it gets rid of all the previous results
         const resetParas = document.querySelectorAll(".resultParas p");
@@ -165,7 +164,6 @@
 
         //Generate a new random number for the next play
         randomNumber = Math.floor(Math.random() * 100) + 1;
-      } /* This is the end of resetGame function */
     </script>
   </body>
 </html>
