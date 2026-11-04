@@ -43,17 +43,17 @@
     <div class="resultParas">
         <p class="guesses"></p>
         <p class="lastResult"></p>
-        <p class="lowOrHigh"></p>
+        <p class="lowOrHi"></p>
     </div>
     <script>
         // Your JavaScript goes here
         //Generate random number:
-        let randomNumber = Math.floor(Math.random() * 100) + 1;
+        let randomNumber = Math.floor(Math.random()100) + 1;
         //Math.random selects random number from 0-0.9999; 100 makes it 0-99.999, Math.floor makes it 0-99 (always round DOWN), +1 makes it 1-100)
         //Results Paragraph
-        const guesses = document.querySelector(".guesses"); /* You also need to match the class selector in the HTML*/
+        const guesses = document.querySelector(".guess");
         const lastResult = document.querySelector(".lastResult");
-        const lowOrHigh = document.querySelector(".lowOrHigh"); /* lowOrHi versus lowOrHigh in class name */
+        const lowOrHigh = document.querySelector(".lowOrHigh");
         //Guess Input
         const guessSubmit = document.querySelector(".guessSubmit");
         const guessField = document.querySelector(".guessField");
@@ -87,9 +87,9 @@
                 lastResult.textContent = "Wrong!";
                 lastResult.style.backgroundColor = "red";
                 if (userGuess < randomNumber) {
-                    lowOrHigh.textContent = "Last guess was too low!";
+                    lowOrHi.textContent = "Last guess was too low!";
                 } else if (userGuess > randomNumber) {
-                    lowOrHigh.textContent = "Last guess was too high!";
+                    lowOrHi.textContent = "Last guess was too high!";
                 }
             }
             //Increase guess count
@@ -120,9 +120,9 @@
             //Reset guess count
             guessCount = 1;
             //Clear results
-            const resetParams = document.querySelectorAll(".resultParas p"); /* typo in function name */
-            for (const resetParam of resetParams) { /* Note the singular versus plural of the variable names */
-                resetParam.textContent = "";
+            const resetParams = document.quereSelectorAll(".resultParas p");
+            for (const resetParams of resetParams) {
+                resetParams.textContent = "";
             }
             //Remove new game button
             resetButton.parentNode.removeChild(resetButton)
@@ -138,7 +138,7 @@
             //Reset result background
             lastResult.style.backgroundColor = "white";
             //Generate new random number for next game
-            randomNumber = Math.floor(Math.random() * 100) + 1
+            randomNumber = Math.floor(Math.random()100) + 1
         }
     </script>
 </body>
