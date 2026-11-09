@@ -112,6 +112,7 @@
             guessField.value = "";
             //Return the focus to the text field
             guessField.focus();
+          } // Fixed the closing brace of checkGuess function 
 
             //Register an event listener to the button
             guessSubmit.addEventListener("click", checkGuess)
@@ -133,13 +134,13 @@
                 //add an event listener
                 resetButton.addEventListener("click", resetGame);
             }
-        }
+        // } // Incorrect closing brace for checkGuess
 
         //Reset the game
         function resetGame(){
           //Reset the guessCount
           guessCount = 1;
-        }
+        // } // incorrect position of the closing brace of resetGame
 
         //Clean up the results, meaning it gets rid of all the previous results
         const resetParas = document.querySelectorAll(".resultParas p");
@@ -164,6 +165,7 @@
 
         //Generate a new random number for the next play
         randomNumber = Math.floor(Math.random() * 100) + 1;
+      } // fixed the closing brace of resetGame function 
     </script>
   </body>
 </html>
