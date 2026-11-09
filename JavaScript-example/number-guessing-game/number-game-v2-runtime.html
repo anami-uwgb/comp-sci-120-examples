@@ -68,12 +68,14 @@
 
       const guesses = document.querySelector(".guesses");
       const lastResult = document.querySelector(".lastResult");
-      const lowOrHi = document.querySelector("lowOrHi");
+      // missing dot in the class name 
+      const lowOrHi = document.querySelector(".lowOrHi");
 
       const guessSubmit = document.querySelector(".guessSubmit");
       const guessField = document.querySelector(".guessField");
 
-      const guessCount = 1;
+      // guessCount should be declared as a variable 
+      let guessCount = 1;
       let resetButton;
 
       function checkGuess() {
@@ -115,7 +117,8 @@
         resetButton = document.createElement("button");
         resetButton.textContent = "Start new game";
         document.body.append(resetButton);
-        resetButton.addEventListener("click", resetgame);
+        // Incorrect function name 
+        resetButton.addEventListener("click", resetGame);
       }
 
       function resetGame() {
@@ -123,7 +126,8 @@
 
         const resetParas = document.querySelectorAll(".resultParas p");
         for (const resetPara of resetParas) {
-          resetParas.textContent = "";
+          // Used the list instead of the index variable
+          resetPara.textContent = "";
         }
 
         resetButton.parentNode.removeChild(resetButton);
