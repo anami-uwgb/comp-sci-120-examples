@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <title>Simple DOM example</title>
+  </head>
+  <body>
+
+    <section>
+      <img
+        src="images/dinosaur.png"
+        alt="A red Tyrannosaurus Rex: A two legged dinosaur
+        standing upright like a human, with small arms, and a
+        large head with lots of sharp teeth." />
+      <p>
+        Here we will add a link to the
+        <a href="https://www.mozilla.org/">Mozilla homepage</a>
+      </p>
+
+      <p class="note">
+        This is an example of using JavaScript to change properties of HTML elements
+      </p>
+
+      <p class="note">
+        This is the second paragraph with the same class selector.
+      </p>
+      <button>Change Properties</button>
+    </section>
+    <script>
+        // retrieve the body of the document
+        const section = document.querySelector("section");
+        // create a new heading 
+        const heading = document.createElement("h1");
+
+        // change the text content
+        heading.textContent = "My Dinosaur page";
+        // add heading to the body 
+        section.prepend(heading);
+        // retrieve the HTML elements to be use in JavaScript 
+        const link = document.querySelector("a");
+        const button = document.querySelector("button");
+
+        // find all the elements with the designated class selector 
+        const notes = document.querySelectorAll(".note");
+        // print the number of elements found
+        console.log(`Found ${notes.length} elements`);
+        // initialize the counter
+        let n = 1; 
+        // iterate over the elements to number them 
+        for(const note of notes){
+            note.textContent = `Updated note ${n}`;
+            n++;
+        }
+
+
+        function changeProperties(){
+            // original information 
+            console.log("Original link info");
+            console.log(`Text content: ${link.textContent}`);
+            console.log(`URL: ${link.href}`);
+            
+            // change the properties
+            link.textContent = "Mozilla Developer Network";
+            link.href = "https://developer.mozilla.org";
+            
+            // modified information 
+            console.log("Modified link info");
+            console.log(`Text content: ${link.textContent}`);
+            console.log(`URL: ${link.href}`);
+        }
+
+
+        // register the function to run when the button is clicked
+        button.addEventListener("click", changeProperties);
+        
+    </script>
+  </body>
+</html>
