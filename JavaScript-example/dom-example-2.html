@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <title>Simple DOM example 2</title>
+  </head>
+  <body>
+    <style>
+      .highlight {
+        color: white;
+        background-color: #069d9d;
+        padding: 10px;
+        text-align: center;
+      }
+
+      .italic {
+        font-style: italic;
+        font-size: x-large;
+      }
+    </style>
+    <section>
+      
+      <p class="italic">
+        Here we will add a link to the
+        <a href="https://www.mozilla.org/">Mozilla homepage</a>
+      </p>
+
+      <button>Change Properties</button>
+    </section>
+    <script>
+        const para = document.querySelector("p");
+
+        // para.style.color = "white";
+        // para.style.backgroundColor = "black";
+
+        const button = document.querySelector("button");
+
+        function changeStyle(){
+          // change the style of the paragraph
+          if(para.classList.contains("highlight")){
+            para.classList.remove("highlight");
+          } else {
+            para.classList.add("highlight");
+          }
+
+          // add a second style 
+          if(para.classList.contains("italic")){
+            para.classList.remove("italic");            
+          } else {
+            para.classList.add("italic");
+          }
+        }
+
+        // register the event listener 
+        button.addEventListener("click", changeStyle);
+        // console.log(para.textContent);
+        // console.log(para.style.color);
+        // console.log(para.style.backgroundColor);
+    </script>
+  </body>
+</html>

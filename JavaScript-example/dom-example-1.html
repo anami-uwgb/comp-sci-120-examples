@@ -18,7 +18,7 @@
       </p>
 
       <p class="note">
-        This is an example of using JavaScript to change properties of HTML elements
+        This is an example of using JavaScript to change properties of HTML elements. 
       </p>
 
       <p class="note">
@@ -48,7 +48,9 @@
         let n = 1; 
         // iterate over the elements to number them 
         for(const note of notes){
-            note.textContent = `Updated note ${n}`;
+          // Append the update note to existing content
+            // note.textContent += `Updated note ${n}`;
+            note.textContent = note.textContent + `Updated note ${n}`;
             n++;
         }
 
